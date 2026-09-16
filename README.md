@@ -6,7 +6,7 @@ Sito personale statico pronto per il deploy su Vercel.
 
 - `index.html` — homepage bianca con dettagli verdi
 - `styles.css` — stile della homepage
-- `vela.html` — pagina separata Vela & Boat Systems / BIB SEA 96
+- `vela.html` — pagina separata Vela & Boat Systems / GIB SEA 96
 - `vela.css` — stile della pagina vela
 - `assets/` — immagini ottimizzate per il web
 - `vercel.json` — configurazione Vercel e header di sicurezza
