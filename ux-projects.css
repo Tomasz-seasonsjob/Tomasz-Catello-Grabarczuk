@@ -15,9 +15,11 @@
 #projects .path h3{margin:0;max-width:560px;font-size:clamp(34px,4vw,62px);line-height:.93;letter-spacing:-.045em}
 #projects .path p{margin:15px 0 0;max-width:520px;font-size:14px;line-height:1.6}
 #projects .path-top{position:absolute;top:24px;left:26px;right:26px;z-index:5;display:flex;align-items:center;justify-content:flex-end}
-#projects .path-arrow{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);color:#173229;font-size:19px;letter-spacing:0;transition:transform .42s cubic-bezier(.2,.75,.2,1),background .25s ease}
+#projects .path-arrow{position:relative;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);color:#173229;font-size:0;letter-spacing:0;transition:transform .42s cubic-bezier(.2,.75,.2,1),background .25s ease}
+#projects .path-arrow:before{content:"";position:absolute;width:15px;height:2px;border-radius:2px;background:currentColor;transform:rotate(-45deg)}
+#projects .path-arrow:after{content:"";position:absolute;width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:translate(4px,-4px)}
 #projects .path:hover{transform:translateY(-7px);box-shadow:0 28px 70px rgba(18,33,28,.15)}
-#projects .path:hover .path-arrow{transform:translate(3px,-3px) rotate(6deg);background:#fff}
+#projects .path:hover .path-arrow{transform:translate(3px,-3px);background:#fff}
 
 /* APOGIA / data world */
 #projects .path.big{grid-column:1;min-height:690px;background:#17372b;color:#fff}
