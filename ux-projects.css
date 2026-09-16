@@ -1,0 +1,57 @@
+/* Project navigation: visual-first, no instructional UI */
+#projects{position:relative;overflow:hidden;background:#f3f7f4;padding-top:126px;padding-bottom:126px}
+#projects:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 82% 6%,rgba(36,91,70,.10),transparent 28%),linear-gradient(rgba(36,91,70,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(36,91,70,.035) 1px,transparent 1px);background-size:auto,72px 72px,72px 72px;mask-image:linear-gradient(to bottom,#000 0%,transparent 78%)}
+#projects>.section-head{position:relative;z-index:2;margin-bottom:54px;max-width:1040px}
+#projects .section-title{font-size:0;line-height:1}
+#projects .section-title:before{content:"Quattro mondi.";display:block;font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,6.2vw,88px);font-weight:400;letter-spacing:-.05em;line-height:.92;color:var(--text)}
+#projects .section-title:after{content:"Un solo metodo.";display:block;margin-top:.05em;font-family:Georgia,"Times New Roman",serif;font-size:clamp(48px,6.2vw,88px);font-weight:400;font-style:italic;letter-spacing:-.05em;line-height:.92;color:var(--green)}
+#projects .section-lead{font-size:0;max-width:720px;margin-top:25px}
+#projects .section-lead:after{content:"Hospitality, software, crescita e sistemi tecnici. Cambia il contesto, resta lo stesso approccio: osservare, misurare, costruire.";display:block;font-size:17px;line-height:1.7;color:var(--muted)}
+#projects .project-hint,#projects .path-badge,#projects .meta{display:none!important}
+#projects .paths{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);gap:18px;align-items:stretch}
+#projects .path-stack{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:18px}
+#projects .path{position:relative;isolation:isolate;overflow:hidden;min-height:0;padding:0;border:0;border-radius:30px;box-shadow:0 18px 45px rgba(18,33,28,.07);transition:transform .42s cubic-bezier(.2,.75,.2,1),box-shadow .42s ease,filter .42s ease;background:#fff}
+#projects .path>div{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:flex-end;width:100%;height:100%;padding:30px}
+#projects .path h3{margin:0;max-width:560px;font-size:clamp(34px,4vw,62px);line-height:.93;letter-spacing:-.045em}
+#projects .path p{margin:15px 0 0;max-width:520px;font-size:14px;line-height:1.6}
+#projects .path-top{position:absolute;top:24px;left:26px;right:26px;z-index:5;display:flex;align-items:center;justify-content:flex-end}
+#projects .path-arrow{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.82);backdrop-filter:blur(12px);color:#173229;font-size:19px;letter-spacing:0;transition:transform .42s cubic-bezier(.2,.75,.2,1),background .25s ease}
+#projects .path:hover{transform:translateY(-7px);box-shadow:0 28px 70px rgba(18,33,28,.15)}
+#projects .path:hover .path-arrow{transform:translate(3px,-3px) rotate(6deg);background:#fff}
+
+/* APOGIA / data world */
+#projects .path.big{grid-column:1;min-height:690px;background:#17372b;color:#fff}
+#projects .path.big:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 18%,rgba(153,208,179,.22),transparent 27%),linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:auto,56px 56px,56px 56px;z-index:-2}
+#projects .path.big:after{content:"DDT  01  284  ·  PRICE DELTA  +2.4%   /   KPI  08:42   /   MATCH  94%\A\AFOOD COST          PROCUREMENT          CONTROL\A━━━━━━━━━━       ━━━━━━━━           ━━━━━━━━━\A\AANOMALIES  03      SUPPLIERS  28       STATUS  LIVE";white-space:pre;position:absolute;top:116px;right:28px;width:min(72%,520px);padding:25px 26px;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.075);box-shadow:inset 0 1px rgba(255,255,255,.09);font:600 10px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.055em;color:rgba(255,255,255,.78);z-index:-1;transform:rotate(-1.2deg)}
+#projects .path.big h3{font-size:clamp(48px,5.7vw,80px)}
+#projects .path.big p{color:rgba(255,255,255,.71);font-size:15px}
+#projects .path.big .path-arrow{background:#e9f3ed;color:#17372b}
+
+/* SeasonsJob / product world */
+#projects .path-stack>.path:nth-child(1){grid-column:1 / -1;min-height:330px;background:#e8f2ed;color:#17372b}
+#projects .path-stack>.path:nth-child(1):before{content:"WORK     PROCuro     WINE     ORDERS";position:absolute;top:86px;left:30px;right:30px;padding:14px 17px;border-radius:999px;background:#fff;border:1px solid rgba(36,91,70,.12);font:800 9px/1 ui-sans-serif,system-ui;letter-spacing:.14em;color:#2f6a51;word-spacing:22px;box-shadow:0 12px 30px rgba(36,91,70,.07)}
+#projects .path-stack>.path:nth-child(1):after{content:"SEASONSJOB  /  HOSPITALITY SYSTEMS";position:absolute;top:35px;left:31px;font-size:9px;font-weight:800;letter-spacing:.17em;color:#4b8069}
+#projects .path-stack>.path:nth-child(1) h3{font-size:clamp(38px,4.1vw,58px)}
+
+/* Mosaique / editorial world */
+#projects .path-stack>.path:nth-child(2){min-height:338px;color:#fff;background:#15261f}
+#projects .path-stack>.path:nth-child(2):before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,17,.12),rgba(10,22,17,.78)),url('/assets/mosaique-venezia-hq.webp') center/cover no-repeat;transition:transform .6s cubic-bezier(.2,.75,.2,1);z-index:-2}
+#projects .path-stack>.path:nth-child(2):after{content:"GROWTH / BRAND / TRACKING";position:absolute;top:30px;left:28px;font-size:9px;font-weight:800;letter-spacing:.17em;color:rgba(255,255,255,.78)}
+#projects .path-stack>.path:nth-child(2):hover:before{transform:scale(1.035)}
+#projects .path-stack>.path:nth-child(2) p{color:rgba(255,255,255,.72)}
+#projects .path-stack>.path:nth-child(2) .path-arrow{background:rgba(255,255,255,.9)}
+
+/* Vela / engineering world */
+#projects .path-stack>.path:nth-child(3){min-height:338px;color:#fff;background:#244f58}
+#projects .path-stack>.path:nth-child(3):before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,47,55,.10),rgba(12,42,49,.77)),url('/assets/sailing-sunset-hq.webp') center/cover no-repeat;transition:transform .6s cubic-bezier(.2,.75,.2,1);z-index:-3}
+#projects .path-stack>.path:nth-child(3):after{content:"";position:absolute;right:18px;top:74px;width:45%;aspect-ratio:3/2;border-radius:16px;background:rgba(255,255,255,.91) url('/assets/gib-sea-plan.svg') center/contain no-repeat;box-shadow:0 16px 35px rgba(0,0,0,.17);transform:rotate(2.3deg);opacity:.92;z-index:-1;transition:transform .5s cubic-bezier(.2,.75,.2,1)}
+#projects .path-stack>.path:nth-child(3):hover:before{transform:scale(1.035)}
+#projects .path-stack>.path:nth-child(3):hover:after{transform:rotate(0) translateY(-4px)}
+#projects .path-stack>.path:nth-child(3) p{color:rgba(255,255,255,.76);max-width:68%}
+#projects .path-stack>.path:nth-child(3) .path-arrow{background:rgba(255,255,255,.9)}
+
+#projects:after{content:"OBSERVE   →   MEASURE   →   BUILD";position:relative;z-index:2;display:block;margin-top:42px;padding-top:23px;border-top:1px solid rgba(36,91,70,.16);font-size:10px;font-weight:800;letter-spacing:.22em;color:#527162;text-align:right}
+
+@media(max-width:1100px){#projects .paths{grid-template-columns:1fr}#projects .path.big{min-height:560px}#projects .path-stack{grid-template-columns:1fr 1fr}#projects .path-stack>.path:nth-child(1){grid-column:1 / -1}}
+@media(max-width:720px){#projects{padding-top:90px;padding-bottom:90px}#projects .paths,#projects .path-stack{grid-template-columns:1fr}#projects .path-stack>.path:nth-child(1){grid-column:auto}#projects .path.big{min-height:520px}#projects .path.big:after{top:120px;left:22px;right:22px;width:auto;font-size:8px;padding:20px}#projects .path{border-radius:24px}#projects .path-stack>.path{min-height:340px!important}#projects .path-stack>.path:nth-child(3):after{width:48%;top:72px}#projects .path-stack>.path:nth-child(3) p{max-width:92%}#projects:after{text-align:left;line-height:1.8}}
+@media(prefers-reduced-motion:reduce){#projects .path,#projects .path:before,#projects .path:after,#projects .path-arrow{transition:none!important}}
