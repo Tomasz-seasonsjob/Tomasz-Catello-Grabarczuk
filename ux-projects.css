@@ -217,3 +217,227 @@
   #projects .path-stack>.path:nth-child(1)>div:before{right:32px;top:128px;width:125px;height:70px}
   #projects .path-stack>.path:nth-child(1)>div:after{right:48px;top:159px;font-size:8px}
 }
+
+
+/* v3 — real visual scenes for APOGIA + SeasonsJob */
+#projects .path.big:before,
+#projects .path.big:after,
+#projects .path.big>div:before,
+#projects .path.big>div:after,
+#projects .path-stack>.path:nth-child(1):before,
+#projects .path-stack>.path:nth-child(1):after,
+#projects .path-stack>.path:nth-child(1)>div:before,
+#projects .path-stack>.path:nth-child(1)>div:after{content:none!important}
+
+#projects .path.big{
+  min-height:720px;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(106,190,150,.16),transparent 28%),
+    linear-gradient(145deg,#112d24 0%,#173d30 52%,#10281f 100%);
+}
+#projects .path.big>div{padding:34px}
+#projects .path.big h3{font-size:clamp(50px,5.8vw,82px);max-width:650px;position:relative;z-index:5}
+#projects .path.big p{position:relative;z-index:5;max-width:600px;color:rgba(255,255,255,.72)}
+
+.apogia-visual{
+  position:absolute;z-index:1;top:72px;left:30px;right:30px;height:350px;
+  border-radius:26px;overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:0 26px 55px rgba(0,0,0,.12),inset 0 1px rgba(255,255,255,.07)
+}
+.hotel-frame{
+  position:absolute;left:18px;top:18px;bottom:18px;width:52%;
+  border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);
+  background:
+    linear-gradient(180deg,rgba(116,205,221,.17) 0 30%,transparent 30%),
+    linear-gradient(180deg,#2f5a4c 30%,#244a3e 100%);
+  box-shadow:inset 0 -40px 80px rgba(0,0,0,.10)
+}
+.hotel-roof{
+  position:absolute;left:7%;right:7%;top:21%;height:10px;border-radius:8px;
+  background:rgba(238,247,242,.88);box-shadow:0 8px 24px rgba(0,0,0,.14)
+}
+.hotel-windows{
+  position:absolute;left:9%;right:9%;top:31%;bottom:22%;
+  display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(3,1fr);
+  gap:12px 10px
+}
+.hotel-windows i{
+  display:block;border-radius:4px;
+  border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(145deg,rgba(235,247,241,.54),rgba(140,196,173,.15));
+  box-shadow:inset 0 0 12px rgba(255,255,255,.05)
+}
+.hotel-windows i:nth-child(3n+1){animation:hotelWindow 5.4s ease-in-out infinite}
+.hotel-windows i:nth-child(3n+2){animation:hotelWindow 6.7s ease-in-out -2s infinite}
+.hotel-ground{
+  position:absolute;left:0;right:0;bottom:0;height:17%;
+  display:flex;align-items:center;justify-content:space-between;padding:0 18px;
+  background:rgba(8,27,21,.55);backdrop-filter:blur(8px);
+  font-size:8px;letter-spacing:.17em;font-weight:800;color:rgba(255,255,255,.7)
+}
+.hotel-ground b{font-size:8px;color:#bfe6d4}
+.hotel-ground b:before{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;
+  background:#73d7a5;box-shadow:0 0 0 5px rgba(115,215,165,.08);
+  animation:livePulse 2.1s ease-out infinite
+}
+
+.cost-panel{
+  position:absolute;right:18px;top:28px;width:44%;height:210px;padding:18px 18px 16px;
+  border-radius:20px;border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.065));
+  backdrop-filter:blur(14px);box-shadow:0 20px 44px rgba(0,0,0,.14);
+  transition:transform .55s cubic-bezier(.2,.75,.2,1)
+}
+.cost-head{display:flex;align-items:center;justify-content:space-between;font-size:8px;font-weight:800;letter-spacing:.17em;color:rgba(255,255,255,.75)}
+.cost-head i{width:7px;height:7px;border-radius:50%;background:#79d5aa;box-shadow:0 0 0 5px rgba(121,213,170,.08)}
+.cost-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:19px}
+.cost-kpis div{padding:10px;border:1px solid rgba(255,255,255,.11);border-radius:12px;background:rgba(6,28,21,.12)}
+.cost-kpis small{display:block;font-size:7px;color:rgba(255,255,255,.54)}
+.cost-kpis strong{display:block;margin-top:4px;font:400 18px/1 Georgia,serif;color:#fff}
+.cost-bars{
+  height:64px;display:flex;align-items:flex-end;gap:7px;margin-top:18px;padding:0 4px 2px;
+  border-bottom:1px solid rgba(255,255,255,.13)
+}
+.cost-bars span{
+  flex:1;height:var(--h);min-height:12%;
+  border-radius:4px 4px 1px 1px;
+  background:linear-gradient(180deg,#9bd7b7,#4f9473);
+  transform-origin:bottom;animation:barBreath 4s ease-in-out infinite
+}
+.cost-bars span:nth-child(2n){animation-delay:-1.2s}
+.cost-bars span:nth-child(3n){animation-delay:-2.3s}
+
+.ddt-sheet{
+  position:absolute;right:42px;bottom:24px;width:190px;height:86px;padding:13px 15px;
+  border-radius:14px;background:#f4f1e9;color:#17372b;
+  box-shadow:0 18px 34px rgba(0,0,0,.22);
+  transform:rotate(-3deg);animation:ddtFloat 5.8s ease-in-out infinite
+}
+.ddt-sheet b{display:block;font:700 13px/1 ui-monospace,monospace;letter-spacing:.12em}
+.ddt-sheet span{display:block;margin-top:6px;font:700 7px/1.15 ui-monospace,monospace;color:#507061}
+#projects .path.big:hover .cost-panel{transform:translateY(-5px) rotate(.3deg)}
+#projects .path.big:hover .ddt-sheet{animation-play-state:paused;transform:rotate(0) translateY(-6px)}
+
+#projects .path-stack>.path:nth-child(1){
+  min-height:400px;
+  background:linear-gradient(145deg,#e4f0e9 0%,#f5f9f6 55%,#dcece4 100%);
+  border:1px solid rgba(36,91,70,.10)
+}
+#projects .path-stack>.path:nth-child(1)>div{padding:28px}
+#projects .path-stack>.path:nth-child(1) h3{
+  position:relative;z-index:5;font-size:clamp(40px,4.25vw,60px);max-width:540px
+}
+#projects .path-stack>.path:nth-child(1) p{
+  position:relative;z-index:5;max-width:530px;color:#45695a
+}
+.sj-visual{
+  position:absolute;z-index:1;top:54px;left:24px;right:24px;height:196px
+}
+.sj-browser{
+  position:absolute;inset:0 0 10px 0;border-radius:22px;overflow:hidden;
+  border:1px solid rgba(36,91,70,.13);background:#fff;
+  box-shadow:0 20px 42px rgba(36,91,70,.12);
+  transition:transform .55s cubic-bezier(.2,.75,.2,1)
+}
+.sj-browser-top{
+  height:34px;display:flex;align-items:center;gap:6px;padding:0 12px;
+  border-bottom:1px solid #e7eeea;background:#fbfdfb
+}
+.sj-browser-top i{width:6px;height:6px;border-radius:50%;background:#b8c9bf}
+.sj-browser-top span{
+  margin-left:8px;font-size:8px;font-weight:800;letter-spacing:.14em;
+  text-transform:uppercase;color:#2e6a50
+}
+.sj-content{display:grid;grid-template-columns:1.2fr .8fr;height:calc(100% - 34px)}
+.sj-jobs{padding:12px 13px}
+.sj-chip{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:7px;font-weight:800;letter-spacing:.13em;color:#477664;margin-bottom:9px
+}
+.sj-chip b{font-size:7px;color:#2b7b57}
+.sj-chip b:before{
+  content:"";display:inline-block;width:5px;height:5px;border-radius:50%;margin-right:5px;
+  background:#44ad75;animation:livePulse 2s ease-out infinite
+}
+.sj-job{
+  display:grid;grid-template-columns:26px 1fr 16px;gap:8px;align-items:center;
+  padding:8px 8px;border-radius:11px;border:1px solid #e7efe9;background:#fbfdfb;
+  margin-bottom:7px;transition:transform .3s ease,box-shadow .3s ease
+}
+.sj-logo{
+  width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+  background:#17372b;color:#fff;font-size:9px;font-weight:800
+}
+.sj-job b{display:block;font-size:9px;color:#183a2e}
+.sj-job small{display:block;margin-top:2px;font-size:7px;color:#789184}
+.sj-job em{font-style:normal;color:#3a7459;font-size:11px}
+.sj-map{
+  position:relative;overflow:hidden;border-left:1px solid #e4ece7;
+  background:
+    linear-gradient(rgba(49,104,80,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(49,104,80,.07) 1px,transparent 1px),
+    linear-gradient(145deg,#eef6f1,#dfeee5);
+  background-size:22px 22px,22px 22px,auto
+}
+.sj-map:after{
+  content:"ADRIATIC COAST";position:absolute;right:10px;bottom:8px;
+  font-size:6px;font-weight:800;letter-spacing:.14em;color:#6d8c7d
+}
+.pin{position:absolute;width:11px;height:11px;border-radius:50% 50% 50% 0;background:#1d6d4b;transform:rotate(-45deg);box-shadow:0 4px 10px rgba(29,109,75,.22)}
+.pin:after{content:"";position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;left:3.5px;top:3.5px}
+.p1{left:28%;top:24%;animation:pinBob 3.2s ease-in-out infinite}
+.p2{left:60%;top:48%;animation:pinBob 3.8s ease-in-out -.8s infinite}
+.p3{left:42%;top:70%;animation:pinBob 4.2s ease-in-out -1.7s infinite}
+.map-route{
+  position:absolute;left:22%;top:35%;width:54%;height:46%;border:2px dashed rgba(36,91,70,.28);
+  border-left:0;border-bottom:0;border-radius:50% 50% 0 0;transform:rotate(18deg)
+}
+.sj-candidate{
+  position:absolute;right:18px;bottom:-8px;display:flex;align-items:center;gap:9px;
+  width:190px;padding:10px 12px;border-radius:16px;background:#17372b;color:#fff;
+  box-shadow:0 18px 34px rgba(23,55,43,.20);transform:rotate(1.5deg);
+  animation:candidateFloat 6s ease-in-out infinite
+}
+.avatar{
+  width:31px;height:31px;flex:0 0 31px;border-radius:50%;display:grid;place-items:center;
+  background:#dff0e7;color:#17372b;font-size:9px;font-weight:900
+}
+.sj-candidate b{display:block;font-size:9px}
+.sj-candidate small{display:block;margin-top:3px;font-size:7px;color:#b9d5c7}
+#projects .path-stack>.path:nth-child(1):hover .sj-browser{transform:translateY(-5px)}
+#projects .path-stack>.path:nth-child(1):hover .sj-job:first-of-type{transform:translateX(3px);box-shadow:0 8px 18px rgba(36,91,70,.08)}
+
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(115,215,165,.28)}70%{box-shadow:0 0 0 8px rgba(115,215,165,0)}100%{box-shadow:0 0 0 0 rgba(115,215,165,0)}}
+@keyframes hotelWindow{0%,100%{filter:brightness(.85)}50%{filter:brightness(1.25)}}
+@keyframes barBreath{0%,100%{transform:scaleY(.94)}50%{transform:scaleY(1.04)}}
+@keyframes ddtFloat{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(-1.2deg) translateY(-7px)}}
+@keyframes pinBob{0%,100%{margin-top:0}50%{margin-top:-4px}}
+@keyframes candidateFloat{0%,100%{transform:rotate(1.5deg) translateY(0)}50%{transform:rotate(.3deg) translateY(-5px)}}
+
+@media(max-width:1100px){
+  #projects .path.big{min-height:680px}
+  .apogia-visual{height:330px}
+  #projects .path-stack>.path:nth-child(1){min-height:390px}
+}
+@media(max-width:720px){
+  #projects .path.big{min-height:610px}
+  #projects .path.big>div{padding:24px}
+  .apogia-visual{top:70px;left:18px;right:18px;height:300px}
+  .hotel-frame{width:55%;left:12px;top:12px;bottom:12px}
+  .hotel-windows{gap:8px 7px}
+  .cost-panel{right:12px;top:18px;width:47%;height:178px;padding:14px}
+  .cost-kpis{gap:5px;margin-top:12px}
+  .cost-kpis div{padding:7px}
+  .cost-kpis strong{font-size:14px}
+  .cost-bars{height:48px;margin-top:12px}
+  .ddt-sheet{right:20px;bottom:18px;width:150px;height:74px}
+  #projects .path-stack>.path:nth-child(1){min-height:385px!important}
+  .sj-visual{top:56px;left:16px;right:16px;height:185px}
+  .sj-candidate{right:10px;width:165px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hotel-windows i,.hotel-ground b:before,.cost-bars span,.ddt-sheet,.sj-chip b:before,.pin,.sj-candidate{animation:none!important}
+}
