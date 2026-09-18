@@ -55,3 +55,165 @@
 @media(max-width:1100px){#projects .paths{grid-template-columns:1fr}#projects .path.big{min-height:560px}#projects .path-stack{grid-template-columns:1fr 1fr}#projects .path-stack>.path:nth-child(1){grid-column:1 / -1}}
 @media(max-width:720px){#projects{padding-top:90px;padding-bottom:90px}#projects .paths,#projects .path-stack{grid-template-columns:1fr}#projects .path-stack>.path:nth-child(1){grid-column:auto}#projects .path.big{min-height:520px}#projects .path.big:after{top:120px;left:22px;right:22px;width:auto;font-size:8px;padding:20px}#projects .path{border-radius:24px}#projects .path-stack>.path{min-height:340px!important}#projects .path-stack>.path:nth-child(3):after{width:48%;top:72px}#projects .path-stack>.path:nth-child(3) p{max-width:92%}#projects:after{text-align:left;line-height:1.8}}
 @media(prefers-reduced-motion:reduce){#projects .path,#projects .path:before,#projects .path:after,#projects .path-arrow{transition:none!important}}
+
+/* v2 — stronger visual hierarchy for APOGIA + SeasonsJob */
+#projects .path-stack{
+  grid-template-rows:minmax(385px,1.15fr) minmax(300px,.85fr);
+}
+#projects .path.big{
+  min-height:720px;
+}
+#projects .path.big:before{
+  background:
+    radial-gradient(circle at 78% 14%,rgba(142,210,177,.22),transparent 25%),
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0)),
+    linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:auto,auto,56px 56px,56px 56px;
+  z-index:-3;
+}
+#projects .path.big:after{
+  content:"CONTROL TOWER  /  LIVE\A\AFOOD COST     24.8%      ↓ 1.6\AORDERS        184        MATCH 94%\ASUPPLIERS     28         LIVE\AANOMALIES     03         REVIEW";
+  white-space:pre;
+  top:86px;
+  right:34px;
+  width:min(48%,420px);
+  padding:25px 27px;
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));
+  backdrop-filter:blur(12px);
+  box-shadow:0 20px 50px rgba(0,0,0,.16),inset 0 1px rgba(255,255,255,.12);
+  font:700 10px/1.95 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.075em;
+  color:rgba(255,255,255,.86);
+  transform:rotate(-1deg);
+  transition:transform .5s cubic-bezier(.2,.75,.2,1);
+}
+#projects .path.big>div:before{
+  content:"";
+  position:absolute;
+  left:34px;
+  top:90px;
+  width:37%;
+  height:300px;
+  border-radius:28px 28px 8px 8px;
+  border:1px solid rgba(255,255,255,.12);
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.11),rgba(255,255,255,.035)),
+    repeating-linear-gradient(90deg,transparent 0 42px,rgba(255,255,255,.10) 42px 44px),
+    repeating-linear-gradient(0deg,transparent 0 40px,rgba(255,255,255,.10) 40px 42px);
+  box-shadow:0 28px 50px rgba(0,0,0,.10),inset 0 1px rgba(255,255,255,.08);
+  transform:perspective(650px) rotateY(8deg) rotateX(1deg);
+  transform-origin:left center;
+  z-index:-2;
+  opacity:.88;
+  transition:transform .55s cubic-bezier(.2,.75,.2,1),opacity .4s ease;
+}
+#projects .path.big>div:after{
+  content:"ROOMS\AOPERATIONS\AFOOD & BEVERAGE\APROCUREMENT";
+  white-space:pre;
+  position:absolute;
+  left:56px;
+  top:125px;
+  font:800 9px/3.75 ui-sans-serif,system-ui;
+  letter-spacing:.17em;
+  color:rgba(255,255,255,.58);
+  z-index:-1;
+}
+#projects .path.big:hover>div:before{
+  transform:perspective(650px) rotateY(3deg) rotateX(0deg) translateY(-5px);
+  opacity:1;
+}
+#projects .path.big:hover:after{
+  transform:rotate(0deg) translateY(-4px);
+}
+#projects .path.big h3{
+  font-size:clamp(52px,6vw,84px);
+  max-width:650px;
+}
+
+#projects .path-stack>.path:nth-child(1){
+  min-height:385px;
+  background:linear-gradient(135deg,#dcefe6 0%,#eff7f2 56%,#d4e9df 100%);
+  border:1px solid rgba(36,91,70,.10);
+}
+#projects .path-stack>.path:nth-child(1):before{
+  content:"";
+  position:absolute;
+  top:58px;
+  left:28px;
+  right:28px;
+  height:168px;
+  border-radius:22px;
+  background:linear-gradient(#fff,#fff) padding-box,
+             linear-gradient(135deg,rgba(36,91,70,.18),rgba(36,91,70,.04)) border-box;
+  border:1px solid transparent;
+  box-shadow:0 18px 45px rgba(36,91,70,.10);
+  z-index:-1;
+  transition:transform .5s cubic-bezier(.2,.75,.2,1);
+}
+#projects .path-stack>.path:nth-child(1):after{
+  content:"WORK       PROCuro       WINE       ORDERS\A\A●  12 candidati     ●  3 ordini aperti     ●  184 vini     ●  live";
+  white-space:pre;
+  position:absolute;
+  top:84px;
+  left:52px;
+  right:54px;
+  font:800 9px/2.8 ui-sans-serif,system-ui;
+  letter-spacing:.12em;
+  color:#356e57;
+  z-index:-1;
+}
+#projects .path-stack>.path:nth-child(1)>div:before{
+  content:"HOSPITALITY OS";
+  position:absolute;
+  right:48px;
+  top:145px;
+  width:150px;
+  height:80px;
+  padding:16px 17px;
+  border-radius:18px;
+  background:#17372b;
+  color:#fff;
+  font:800 9px/1 ui-sans-serif,system-ui;
+  letter-spacing:.14em;
+  box-shadow:0 16px 34px rgba(23,55,43,.20);
+  z-index:-1;
+  transform:rotate(2deg);
+  transition:transform .5s cubic-bezier(.2,.75,.2,1);
+}
+#projects .path-stack>.path:nth-child(1)>div:after{
+  content:"AI  ●\Aconnected";
+  white-space:pre;
+  position:absolute;
+  right:65px;
+  top:178px;
+  font:700 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.05em;
+  color:#cde8da;
+  z-index:-1;
+  transform:rotate(2deg);
+}
+#projects .path-stack>.path:nth-child(1):hover:before{
+  transform:translateY(-5px);
+}
+#projects .path-stack>.path:nth-child(1):hover>div:before{
+  transform:rotate(0deg) translateY(-5px);
+}
+#projects .path-stack>.path:nth-child(1) h3{
+  font-size:clamp(42px,4.4vw,62px);
+  max-width:520px;
+}
+
+@media(max-width:720px){
+  #projects .path.big{min-height:560px}
+  #projects .path.big>div:before{left:22px;top:90px;width:46%;height:220px}
+  #projects .path.big>div:after{left:34px;top:112px;font-size:7px;line-height:3.5}
+  #projects .path.big:after{top:104px;right:18px;width:47%;font-size:7px;padding:18px}
+  #projects .path-stack>.path:nth-child(1){min-height:380px!important}
+  #projects .path-stack>.path:nth-child(1):before{top:52px;left:20px;right:20px;height:150px}
+  #projects .path-stack>.path:nth-child(1):after{top:75px;left:35px;right:35px;font-size:7px;line-height:2.6}
+  #projects .path-stack>.path:nth-child(1)>div:before{right:32px;top:128px;width:125px;height:70px}
+  #projects .path-stack>.path:nth-child(1)>div:after{right:48px;top:159px;font-size:8px}
+}
