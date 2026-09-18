@@ -45,3 +45,29 @@
   .island-name{font-size:9px}
   .map-credit{right:18px;bottom:51px;max-width:180px;text-align:right;font-size:7px}
 }
+
+/* Semi-3D sailboat marker */
+.route-boat{transform-box:fill-box;transform-origin:center;will-change:transform}
+.route-boat-body{transform-box:fill-box;transform-origin:0 6px;will-change:transform}
+.boat-water-shadow{fill:rgba(13,34,38,.16);filter:blur(1.2px)}
+.boat-hull-3d{fill:url(#hull3d);stroke:#0d2226;stroke-width:1.6;stroke-linejoin:round}
+.boat-deck-3d{fill:url(#deck3d);stroke:rgba(23,54,58,.55);stroke-width:1}
+.boat-cabin{fill:#d8ece8;stroke:#17363a;stroke-width:1}
+.boat-mast{stroke:#17363a;stroke-width:2.1;stroke-linecap:round}
+.boat-boom{stroke:#17363a;stroke-width:1.6;stroke-linecap:round}
+.boat-sail-main-3d{fill:url(#sailMain3d);stroke:#17363a;stroke-width:1.5;stroke-linejoin:round}
+.boat-sail-jib-3d{fill:url(#sailJib3d);stroke:#17363a;stroke-width:1.4;stroke-linejoin:round}
+.sail-highlight{fill:none;stroke:rgba(255,255,255,.78);stroke-width:1.2;stroke-linecap:round}
+.jib-highlight{stroke:rgba(255,255,255,.55)}
+.boat-detail{fill:#74cddd;stroke:#17363a;stroke-width:1}
+.boat-wake{opacity:.2;will-change:transform,opacity}
+.wake-line{fill:none;stroke:rgba(255,255,255,.92);stroke-linecap:round;stroke-width:3.2;stroke-dasharray:11 9;animation:wakeDrift 1.35s linear infinite}
+.wake-two{stroke-width:2.2;opacity:.68;animation-duration:1.7s}
+.wake-three{stroke-width:1.6;opacity:.45;animation-duration:2s}
+@keyframes wakeDrift{to{stroke-dashoffset:-40}}
+@media(max-width:620px){
+  .route-boat-body{transform-origin:0 5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .wake-line{animation:none}
+}
